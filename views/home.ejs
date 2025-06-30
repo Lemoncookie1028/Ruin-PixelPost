@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 2em;
+    }
+    .btn {
+      border: 4px solid #00ffcc;
+      background: black;
+      padding: 1em 2em;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🕹 Ruin PixelPost</h1>
+  <% if (!user) { %>
+    <a class="btn" href="/auth/github">Login with GitHub</a>
+  <% } else { %>
+    <p>Welcome <%= user.username %>!</p>
+    <a class="btn" href="/feed">Enter Feed</a>
+    <a class="btn" href="/logout">Logout</a>
+  <% } %>
+</body>
+</html>
